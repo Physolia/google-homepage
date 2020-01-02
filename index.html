@@ -1,0 +1,224 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Google Search - The Odin Project</title>
+  <meta name="description" content="Google Homepage Project">
+  <meta name="author" content="Nomi">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/all.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="https://about.google/" target="_blank">About</a>
+    <a href="https://store.google.com/" target="_blank">Store</a>
+    <div style="float:right;margin-right:1%">
+      <a href="https://mail.google.com/" target="_blank">Images</a>
+      <a href="https://mail.google.com/" target="_blank">Gmail</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()"><i class="fas fa-th fa-lg nav-icons"></i></button>
+        <div class="dropdown-content" id="myDropdown">
+          <ul class="g-box">
+            <li class="g-tools">
+              <a class="g-links" href="https://myaccount.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -345px;"></span>
+                <span class="span-text">Account</span>
+              </a>
+            </li>
+            <li class="g-tools">
+              <a class="g-links" href="https://www.google.com/webhp?tab=ww1" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -138px;"></span>
+                <span class="span-text">Search</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://maps.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -1035px;"></span>
+                <span class="span-text">Maps</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://www.youtube.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -1449px;"></span>
+                <span class="span-text">YouTube</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://play.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -759px;"></span>
+                <span class="span-text">Play</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://news.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -2208px;"></span>
+                <span class="span-text">News</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://mail.google.com/mail/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -2139px;"></span>
+                <span class="span-text">Gmail</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://contacts.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -2622px;"></span>
+                <span class="span-text">Contacts</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://drive.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 0;"></span>
+                <span class="span-text">Drive</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://www.google.com/calendar" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -1794px;"></span>
+                <span class="span-text">Calendar</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://translate.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -1587px;"></span>
+                <span class="span-text">Translate</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://photos.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -2070px;"></span>
+                <span class="span-text">Photos</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://www.google.com/shopping"
+                target="_parent">
+                <span class="span-pictures" style="background-position: 0 -69px;"></span>
+                <span class="span-text">Shopping</span>
+              </a>
+            </li>
+
+            <li class="g-tools">
+              <a class="g-links" href="https://duo.google.com/" target="_parent">
+                <span class="span-pictures" style="background-position: 0 -1242px;"></span>
+                <span class="span-text">Duo</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="https://mail.google.com/" target="_blank" id="login">Sign In</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <center>
+      <img alt="Google" height="92" id="hplogo" src="googlelogo_color_272x92dp.png"
+        srcset="googlelogo_color_272x92dp.png 1x, googlelogo_color_272x92dp.png 2x" style="padding-top:10%" width="272">
+      <br>
+      <br>
+      <form class="search" action="https://www.google.com/search" style="overflow:visible" data-submitfalse="q" id="tsf"
+        method="GET" name="f" role="search">
+        <i class="fas fa-search fa-lg search-icon"></i>
+        <input type="text" placeholder="Search..." class="search" maxlength="2048" name="q" aria-autocomplete="both"
+          aria-haspopup="false" autocapitalize="off" autocomplete="off" autocorrect="off" role="combobox"
+          spellcheck="false" title="Search" value="" aria-label="Search">
+        <br>
+        <div id="search_btns">
+          <button class="g-button" value="Google Search" aria-label="Google Search" name="btnK" type="submit">Google
+            Search</button>
+          <button class="g-button" aria-label="I'm Feeling Lucky" name="btnI" type="submit">
+            <ul>
+              <li>I'm Feeling Stellar</li>
+              <li>I'm Feeling Artistic</li>
+              <li>I'm Feeling Wonderful</li>
+              <li>I'm Feeling Curious</li>
+              <li>I'm Feeling Hungry</li>
+              <li>I'm Feeling Lucky</li>
+              <li>I'm Feeling Doodley</li>
+              <li>I'm Feeling Generous</li>
+              <li>I'm Feeling Trendy</li>
+              <li>I'm Feeling Puzzled</li>
+              <li>I'm Feeling Playful</li>
+            </ul>
+          </button>
+        </div>
+        <script>
+          $('#search_btns button:nth-child(2)').hover(function() {
+            btnTimeID = setTimeout(function() {
+
+              // We are using the math object to randomly pick a number between 1 - 11, and then applying the formula (5n-3)5 to this number, which leaves us with a randomly selected number that is applied to the <ul> (i.e. -185) and corresponds to the position of a word (or <li> element, i.e. "I'm Feeling Curious").
+              var pos = -((Math.floor((Math.random() * 10) + 1)) * 5 - 1) * 5
+
+              if (pos === -120) {
+                console.log("position didn't change, let's force change")
+                pos = -45;
+              }
+              $('#search_btns button:nth-child(2) ul').animate({'bottom':pos + 'px'}, 245);
+
+              // Change the width of the button to fit the currently selected word.
+              if (pos === -10 || pos === -95 || pos === -170 || pos === 05 || pos === -45 || pos === -145) {
+                console.log(pos + ' = -10, -95, -170, 05, -45, -145');
+                $('#search_btns button:nth-child(2)').css('width', '155px');
+              }
+              else if (pos === -70) {
+                console.log(pos + ' = -70');
+                $('#search_btns button:nth-child(2)').css('width', '165px');
+              }
+              else if (pos === -195) {
+                console.log(pos + ' = -195');
+                $('#search_btns button:nth-child(2)').css('width', '168px');
+              }
+              else {
+                console.log(pos + ' = -245, -220');
+                $('#search_btns button:nth-child(2)').css('width', '150px');
+              }
+            },200);
+          }, function() {
+
+          clearTimeout(btnTimeID);
+
+          setTimeout(function() {
+            console.log('setTimeout function');
+            $('#search_btns button:nth-child(2) ul').css('bottom', '-120px'); // this is the original position
+            $('#search_btns button:nth-child(2)').css('width', '150px'); // reset the original width of the button
+          },200);
+        });
+        </script>
+      </form>
+    </center>
+  </div>
+
+
+  <div class="footer">
+    <ul>
+      <li><a href="https://ads.google.com/home/" target="_blank">Advertising</a></li>
+      <li><a href="https://www.google.com/services/" target="_blank">Business</a></li>
+      <li><a href="https://www.google.com/search/howsearchworks/" target="_blank">How Search Works</a></li>
+      <li class="right edge"><a href="https://www.google.com/preferences" target="_blank">Settings</a></li>
+      <li class="right"><a href="https://policies.google.com/terms" target="_blank">Terms</a></li>
+      <li class="right"><a href="https://policies.google.com/privacy" target="_blank">Privacy</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
